@@ -8,7 +8,7 @@ local old
 old = hookfunction(game.HttpGet, function(self, url)
 	if type(url) == "string" then -- to prevent errors by passing a non string through httpget
 		if string.match(url, "ifFZVIKsziuM9un7dxEroDbzYOkHzWVt") or string.match(url, "eu3YJwdqJU9TsuSV34OlTbxWHiCTjVxO") then -- checks if the url contains the whitelist url
-			return game:HttpGet("https://raw.githubusercontent.com/zxrorocks/test-repo2/main/wl") -- returns a fabricated table of whitelisted users, bypassing the premium system
+	        	return game:HttpGet("https://raw.githubusercontent.com/zxrorocks/test-repo2/main/wl") -- returns a fabricated table of whitelisted users, bypassing the premium system
 		end
 		if string.match(url, "hWqJG9NJ37TPEQR6OP5LXODHnkR6lPei") then -- checks if the url is the encrypt url
 			return "hYz6LTxgBP" -- always return the correct encrypt code, bypassing any attempt at killswitching the script
@@ -33,10 +33,10 @@ old = hookfunction(game.HttpGet, function(self, url)
 		end
 		if not string.match(url, "zxrorocks") then -- if anything else comes up i'll catch it with this
 			print(url)
-			return old(self,url)
+			return old(self, url)
 		end
 	end
-	return old(self, url)
+    return old(self, url)
 end)
 
 
