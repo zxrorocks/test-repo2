@@ -1,3 +1,7 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Stefanuk12/ROBLOX/master/Games/Da%20Hood/AntiCheatBypass.lua"))()
+
+game.Workspace.FallenPartsDestroyHeight = 0/0
+
 local modids = {
 	97123240,
 	3718161806,
@@ -47,13 +51,22 @@ local modids = {
 	53715402,
 	6074834798
 }
+
 for i,v in pairs(game.Players:GetPlayers()) do
 	if table.find(modids, v.UserId) then
 		game.Players.LocalPlayer:Kick("mod")
 	end
 end
+
 game.Players.PlayerAdded:Connect(function(plr)
 	if table.find(modids, v.UserId) then
 		game.Players.LocalPlayer:Kick("mod")
 	end
+end)
+
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+	vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+	wait(1)
+	vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
