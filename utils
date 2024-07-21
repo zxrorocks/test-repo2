@@ -59,7 +59,7 @@ for i,v in pairs(game.Players:GetPlayers()) do
 end
 
 game.Players.PlayerAdded:Connect(function(plr)
-	if table.find(modids, v.UserId) then
+	if table.find(modids, plr.UserId) then
 		game.Players.LocalPlayer:Kick("mod")
 	end
 end)
