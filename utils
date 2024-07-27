@@ -1,3 +1,4 @@
+if getgenv().Executed then return end
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Stefanuk12/ROBLOX/master/Games/Da%20Hood/AntiCheatBypass.lua"))()
 
 game.Workspace.FallenPartsDestroyHeight = 0/0
@@ -72,3 +73,4 @@ game:GetService("Players").LocalPlayer.Idled:connect(function()
 end)
 
 for i,v in pairs(workspace:GetDescendants()) do if v:isA("Seat") then v:Destroy() end end
+getgenv().Executed = true
