@@ -5,7 +5,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Stefanuk12/ROBLOX/mas
 print('zxro - ac bypass complete, moving onto hook')
 
 local old
-old = hookfunction(game.HttpGet, function(self, url)
+old = hookfunction(game.HttpGetAsync, function(self, url)
 	if type(url) == "string" then -- to prevent errors by passing a non string through httpget
 		if string.match(url, "ifFZVIKsziuM9un7dxEroDbzYOkHzWVt") or string.match(url, "eu3YJwdqJU9TsuSV34OlTbxWHiCTjVxO") then -- checks if the url contains the whitelist url
 	        	return game:HttpGet("https://raw.githubusercontent.com/zxrorocks/test-repo2/main/wl") -- returns a fabricated table of whitelisted users, bypassing the premium system
