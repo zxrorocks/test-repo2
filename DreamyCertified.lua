@@ -1,6 +1,6 @@
 print('zxro - ac bypass in progress')
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Stefanuk12/ROBLOX/master/Games/Da%20Hood/AntiCheatBypass.lua"))() -- anticheat bypass to prevent anticheat bans
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zxrorocks/test-repo2/main/utils"))() -- anticheat bypass to prevent anticheat bans
 
 print('zxro - ac bypass complete, moving onto hook')
 
